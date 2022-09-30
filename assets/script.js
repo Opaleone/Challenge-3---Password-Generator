@@ -27,7 +27,7 @@ let generatePassword = () => {
   let pwdLengthPrompt = prompt('How many characters do you want you password to be?');
 
   // This converts the variable on line 27 to an integer
-  let pwdLength = parseInt(pwdLengthPrompt)
+  let pwdLength = parseInt(pwdLengthPrompt);
     
   // This is validating that the password length is between 8 and 128 characters
   if (pwdLength < 8 || pwdLength > 128) {
@@ -67,7 +67,7 @@ let generatePassword = () => {
   // This verifies that the User accepted at least ONE character type for the password
   if (!upperCaseOption && !lowerCaseOption && !specialCharOption && !numbersOption) {
     alert('Must select at least one type of character!')
-    generatePassword();
+    return;
   }
 
   // This logs the concatArr array to the console to verify that the User selected character types are the only types in the array.
