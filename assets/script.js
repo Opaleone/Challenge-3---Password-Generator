@@ -32,7 +32,7 @@ let generatePassword = () => {
   // This is validating that the password length is between 8 and 128 characters
   if (pwdLength < 8 || pwdLength > 128) {
     alert('Password must be between 8 and 128 characters!')
-    generatePassword();
+    return;
     // Else if below is validating that User either did not enter a string. 
     //It also serves to end the function if user presses cancel instead of entering a number.
   } else if (isNaN(pwdLength)) {
