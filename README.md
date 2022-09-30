@@ -1,2 +1,5 @@
 # Challenge-3---Password-Generator
-This is a password generator built using JavaScript.
+
+## Description
+
+This build is a randomized password generator built using mostly JavaScript.

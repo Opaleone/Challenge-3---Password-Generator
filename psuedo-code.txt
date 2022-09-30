@@ -1,0 +1,25 @@
+(This file is my psuedo-code to plan my build)
+
+
+Create variables of all types of characters to be used.
+  1. Empty variable to hold password
+  2. setting up arrays using charcodes that can be iterated through.
+
+get input from user
+  1. Prompt for how many characters User wants
+  2. List of confirms to see if User wants uppercase, lowercase, numbers, and special characters.
+  3. Store boolean values in variables for recall later.
+
+Generate password
+  1. Specify which types of characters User wants
+    a. Set up if statements that test boolean types
+    b. Set else to return if no type is selected
+  2. Grab random characters of each type by iterating through an array composed of all the character types.
+    a. 
+  3. Add randomly selected characters to a variable.
+  4. Return character in string form for earlier function to display.
+
+Display password to user
+  1. Set up password in a variable that can be returned to display function
+
+Allow user to copy password after its been displayed
