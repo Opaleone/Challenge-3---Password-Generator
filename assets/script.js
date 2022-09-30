@@ -8,20 +8,16 @@ let pwdModifiers = {
   numbers: '1234567890',
 }
 
-//initialized variable to store a string of all character types
-let concatArr = '';
-
-//Initialized variable to push random characters to and store resulting randomized password
-let pwd = "";
-
 
 // This function generates the entire password and then returns the end result to the function writePassword() at the end of the file.
 let generatePassword = () => {
-  // Emptys the pwd variable everytime the function generatePassword() runs
-  pwd = '';
+  
+  //initialized variable to store a string of all character types
+  let concatArr = '';
 
-  // Emptys the concatArr variable just like pwd on line 21
-  concatArr = '';
+  //Initialized variable to push random characters to and store resulting randomized password
+  let pwd = '';
+  
 
   // This asks the user how many characters their password should be
   let pwdLengthPrompt = prompt('How many characters do you want you password to be?');
