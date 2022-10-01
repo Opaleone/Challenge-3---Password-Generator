@@ -13,7 +13,7 @@ let pwdModifiers = {
 let generatePassword = () => {
   
   //initialized variable to store a string of all character types
-  let concatArr = '';
+  let charArr = '';
 
   //Initialized variable to push random characters to and store resulting randomized password
   let pwd = '';
@@ -43,36 +43,36 @@ let generatePassword = () => {
   let numbersOption = confirm('Do you want to include numbers in your password?');
 
 
-  // These 4 if statements check to see if the user accepted the various character types
-  if (upperCaseOption === true) {
-    concatArr += pwdModifiers.characters.toUpperCase();
-  }
-
-  if (lowerCaseOption === true) {
-    concatArr += pwdModifiers.characters;
-  }
-
-  if (specialCharOption === true) {
-    concatArr += pwdModifiers.specialChar;
-  }
-
-  if (numbersOption === true) {
-    concatArr += pwdModifiers.numbers;
-  }
-
   // This verifies that the User accepted at least ONE character type for the password
   if (!upperCaseOption && !lowerCaseOption && !specialCharOption && !numbersOption) {
     alert('Must select at least one type of character!')
     return;
   }
 
-  // This logs the concatArr array to the console to verify that the User selected character types are the only types in the array.
-  console.log(concatArr);
+  // These 4 if statements check to see if the user accepted the various character types, then adds the selected char type to the charArr variable.
+  if (upperCaseOption === true) {
+    charArr += pwdModifiers.characters.toUpperCase();
+  }
+
+  if (lowerCaseOption === true) {
+    charArr += pwdModifiers.characters;
+  }
+
+  if (specialCharOption === true) {
+    charArr += pwdModifiers.specialChar;
+  }
+
+  if (numbersOption === true) {
+    charArr += pwdModifiers.numbers;
+  }
+
+  // This logs the charArr array to the console to verify that the User selected character types are the only types in the array.
+  console.log(charArr);
 
 
-  // This for loop iterates through the concatArr variable by the length of User-specified password length and randomly selects a character from the concatArr.
+  // This for loop iterates through the charArr variable by the length of User-specified password length and randomly selects a character.
   for (let i = 0; i < pwdLength; i++) {
-    pwd += concatArr.charAt(Math.floor(Math.random() * concatArr.length));
+    pwd += charArr.charAt(Math.floor(Math.random() * charArr.length));
     console.log(pwd)
   }
 
